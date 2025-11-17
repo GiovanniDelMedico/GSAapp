@@ -1,6 +1,6 @@
 // App.jsx
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Category from "./components/Category/Category";
@@ -207,7 +207,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar categories={categories} />
 
       <main className="mx-auto max-w-2xl p-4">
@@ -246,7 +246,8 @@ function App() {
           ))}
         </Routes>
       </main>
-    </BrowserRouter>
+      </HashRouter>
+
   );
 }
 
